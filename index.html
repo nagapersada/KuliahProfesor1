@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuliah Bisnis DVTeam</title>
+    <style>
+        /* Mengatur dasar halaman */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            overflow: hidden; /* Mencegah scroll yang tidak perlu */
+        }
+
+        /* Kontainer utama untuk background */
+        .background-container {
+            /* Menggunakan gambar yang Anda tentukan */
+            background-image: url('background.jpg');
+            
+            /* Membuat gambar menutupi seluruh layar */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Membuat background tetap saat di-scroll (jika ada konten) */
+            
+            /* Memastikan kontainer mengisi seluruh layar */
+            height: 100vh; /* 100% dari tinggi viewport */
+            width: 100vw;  /* 100% dari lebar viewport */
+            
+            /* Opsi untuk menambahkan judul di tengah (terinspirasi dari gambar Anda) */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Rata atas */
+            padding-top: 60px; /* Jarak dari atas */
+        }
+
+        /* (Opsional) Judul halaman yang elegan */
+        .title {
+            font-size: 2.5em; /* Ukuran font besar */
+            color: white;
+            font-weight: bold;
+            text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.7); /* Bayangan teks agar terbaca */
+            text-align: center;
+        }
+
+        /* Kontainer untuk pemutar audio */
+        .audio-player-bar {
+            /* === KUNCI UTAMA: Posisi Presisi di Bawah === */
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            
+            /* Lebar penuh */
+            width: 100%;
+            
+            /* Tampilan profesional (latar belakang gelap transparan) */
+            background-color: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(8px); /* Efek blur (jika didukung browser) */
+            
+            /* Bayangan di atas untuk memisahkan dari konten */
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.5);
+            
+            /* Padding di dalam bar */
+            padding: 20px;
+            box-sizing: border-box; /* Agar padding tidak menambah lebar */
+            
+            /* Mengatur audio di tengah bar */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Menyesuaikan style audio player */
+        audio {
+            width: 100%;
+            max-width: 700px; /* Batas lebar maksimum agar terlihat bagus di layar besar */
+            outline: none; /* Menghilangkan outline biru saat di-klik */
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="background-container">
+        
+        <div class="title">
+            Kuliah Bisnis DVTeam
+        </div>
+
+    </div>
+
+    <div class="audio-player-bar">
+        <audio controls autoplay>
+            <source src="kuliahProfesor(3).mp3" type="audio/mpeg">
+            Browser Anda tidak mendukung elemen audio ini.
+        </audio>
+    </div>
+
+</body>
+</html>
